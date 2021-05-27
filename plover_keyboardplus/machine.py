@@ -5,7 +5,7 @@ from plover_keyboardplus.keyboardcontrol import KeyboardPlusCapture
 
 
 # i18n: Machine name.
-_._('KeyboardPlus')
+_._('Keyboard Plus')
 
 
 class KeyboardPlus(Keyboard):
