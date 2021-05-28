@@ -44,7 +44,10 @@ _._('Keyboard Plus')
 class KeyboardPlus(keyboard.Keyboard):
     KEYS_LAYOUT = KeyboardPlusCapture.SUPPORTED_KEYS_LAYOUT
     ACTIONS = ('arpeggiate', )
-    KEYMAP_MACHINE_TYPE = 'Keyboard'
+    # Ordinarily, we would fall back on Keyboard here
+    # Due to the way the fallback code in plover.config::system_keymap_option::build_keymap
+    #   works, this will remove all of the extra keys prodided above.
+    # KEYMAP_MACHINE_TYPE = 'Keyboard'
 
     def __init__(self, params):
         super().__init__(params)
